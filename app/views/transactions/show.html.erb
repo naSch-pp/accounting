@@ -1,0 +1,18 @@
+<p>
+  <b>Origin account:</b>
+  <%=h @transaction.origin_account %>
+</p>
+
+<p>
+  <b>Target account:</b>
+  <%=h @transaction.target_account %>
+</p>
+
+<p>
+  <b>Valuta:</b>
+  <%=h @transaction.valuta %>
+</p>
+
+
+<%= link_to 'Edit', edit_transaction_path(@transaction) %> |
+<%= link_to 'Back', transactions_path %>

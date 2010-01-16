@@ -1,0 +1,17 @@
+<div class="expense_item span-24">
+	<div class="span-10"><%= f.text_area :name, :style => "height: 50px;", :class => "span-10" %></div>
+	<div class="span-4">
+		<div class="span-2" style="line-height:27px;">
+			Stunden:<br />
+			Stundenlohn:<br />
+			Fixkosten:
+		</div>
+		<div class="span-2 last">
+			<%= f.text_field :hours, :class => "span-2" %><br />
+			<%= f.text_field :rate, :class => "span-2" %><br />
+			<%= f.text_field :fixcosts, :class => "span-2" %>
+		</div>
+	</div>
+	<div class="span-8"><%= f.text_area :remark, :style => "height: 50px;", :class => "span-8" %></div>
+	<div class="span-2 last"><%= remove_child_link "<span>X</span>", f %></div>
+</div>

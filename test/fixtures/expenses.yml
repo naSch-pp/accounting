@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  hours: 1.5
+  rate: 1.5
+  fixcosts: 1.5
+  remark: MyString
+  offer: 
+  user: 
+
+two:
+  name: MyString
+  hours: 1.5
+  rate: 1.5
+  fixcosts: 1.5
+  remark: MyString
+  offer: 
+  user: 

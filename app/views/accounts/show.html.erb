@@ -1,0 +1,23 @@
+<p>
+  <b>Account number:</b>
+  <%=h @account.account_number %>
+</p>
+
+<p>
+  <b>Iban:</b>
+  <%=h @account.iban %>
+</p>
+
+<p>
+  <b>bank_code:</b>
+  <%=h @account.bank_code %>
+</p>
+
+<p>
+  <b>Bic:</b>
+  <%=h @account.bic %>
+</p>
+
+
+<%= link_to 'Edit', edit_account_path(@account) %> |
+<%= link_to 'Back', accounts_path %>

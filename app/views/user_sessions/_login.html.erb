@@ -1,0 +1,27 @@
+<div class="span-10 prepend-7 append-7 append-bottom">
+	<h1>teambusiness Login</h1>
+	<% form_for UserSession.new, :url => user_session_path do |f| %>
+		<div class="span-10">
+			<%= f.error_messages %>
+		</div>
+		<div class="span-2 prepend-1">
+			<%= f.label :login %>
+		</div>
+		<div class="span-7 last">
+			<%= f.text_field :login, :class => "span-4" %><br />
+		</div>
+		<div class="span-2 prepend-1">
+			<%= f.label :password %>
+		</div>
+		<div class="span-7 last">
+			<%= f.password_field :password, :class => "span-4" %><br />
+		</div>
+		<div class="span-7 prepend-3">
+			<%= f.check_box :remember_me, :class => "span-1" %><%= f.label :remember_me %>
+		</div>
+		<div class="span-1 prepend-6">
+			<%= f.submit "Login", :class => 'button' %>
+		</div>
+	<% end %>
+</div>
+<div class="span-8 last"></div>

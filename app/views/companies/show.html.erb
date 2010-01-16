@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @company.name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @company.address %>
+</p>
+
+<p>
+  <b>Vatid:</b>
+  <%=h @company.vatid %>
+</p>
+
+<p>
+  <b>Account:</b>
+  <%=h @company.account %>
+</p>
+
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

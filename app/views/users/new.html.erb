@@ -1,0 +1,11 @@
+<h2>Neuer Mitarbeiter</h2>
+ 
+<% form_for @user do |f| %>
+	<div class="span-12 last">
+		<%= f.error_messages %>
+		<%= render :partial => "form", :object => f %>
+		<div class="span-12">
+			<%= f.submit "Register" %>
+		</div>
+	</div>
+<% end %>

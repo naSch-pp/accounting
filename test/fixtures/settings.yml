@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  offer_provision: 1.5
+  company_name: MyString
+  vat: 1.5
+
+two:
+  offer_provision: 1.5
+  company_name: MyString
+  vat: 1.5

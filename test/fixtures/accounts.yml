@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  account_number: 
+  iban: 
+  BankCode: 
+  bic: 
+
+two:
+  account_number: 
+  iban: 
+  BankCode: 
+  bic: 

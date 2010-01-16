@@ -1,0 +1,54 @@
+div#header {
+	background-color: white;
+}
+div.tabs {
+	background: url(/images/blue_bg.jpg) repeat-x;
+	height: 30px;
+}
+div.tabs li {
+	border: 0;
+}
+div#navigation {
+	background: url(/images/footer_bg.jpg) repeat-x;
+	height: 150px;
+	color: whitesmoke;
+}
+div.tabs li a {
+	background-color: black;
+	color: white;
+	border:0;
+	font-weight: normal;
+}
+div.tabs li.current a {
+	background-color: grey;
+}
+div#header div#logo h1 a span {
+	display: none;
+}
+div#header div#logo h1 a {
+	display: block;
+	width: 515px;
+	height: 50px;
+	background: url(/images/tb_logo.jpg) no-repeat;
+}
+div#header div#logo {
+	margin-left: 20px;
+	margin-top: 20px;
+}
+div#footer {
+	background: url(/images/footer_bg.jpg) repeat-x;
+	height: 50px;
+	color: whitesmoke;
+}
+div#content {
+}
+div#navigation h4 {
+	color: white;
+}
+div#navigation a {
+	color: whitesmoke;
+	text-decoration:none;
+}
+label {
+	font-weight: normal;
+}

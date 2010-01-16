@@ -1,0 +1,18 @@
+<p>
+  <b>Offer:</b>
+  <%=h @bill.offer %>
+</p>
+
+<p>
+  <b>Bill number:</b>
+  <%=h @bill.bill_number %>
+</p>
+
+<p>
+  <b>Transaction:</b>
+  <%=h @bill.transaction %>
+</p>
+
+
+<%= link_to 'Edit', edit_bill_path(@bill) %> |
+<%= link_to 'Back', bills_path %>

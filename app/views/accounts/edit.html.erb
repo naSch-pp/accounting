@@ -1,0 +1,28 @@
+<h1>Editing account</h1>
+
+<% form_for(@account) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :account_number %><br />
+    <%= f.text_field :account_number %>
+  </p>
+  <p>
+    <%= f.label :iban %><br />
+    <%= f.text_field :iban %>
+  </p>
+  <p>
+    <%= f.label :bank_code %><br />
+    <%= f.text_field :bank_code %>
+  </p>
+  <p>
+    <%= f.label :bic %><br />
+    <%= f.text_field :bic %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @account %> |
+<%= link_to 'Back', accounts_path %>

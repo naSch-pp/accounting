@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  origin_account: 
+  target_account: 
+  valuta: 2010-01-10
+
+two:
+  origin_account: 
+  target_account: 
+  valuta: 2010-01-10

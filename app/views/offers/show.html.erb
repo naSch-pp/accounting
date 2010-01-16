@@ -1,0 +1,32 @@
+<p>
+  <b>Number:</b>
+  <%=h @offer.number %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%=h @offer.content %>
+</p>
+
+<p>
+  <b>Addition:</b>
+  <%=h @offer.addition %>
+</p>
+
+<p>
+  <b>Taxrate:</b>
+  <%=h @offer.taxrate %>
+</p>
+
+<p>
+  <b>Customer:</b>
+  <%=h @offer.customer %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @offer.user %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

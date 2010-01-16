@@ -1,0 +1,51 @@
+<div class="span-2">
+	<%= form.label :login %>
+</div>
+<div class="span-8 last">
+	<%= form.text_field :login, :class => "span-4" %>
+</div>
+
+<div class="span-12">
+	<div class="span-2">
+		<%= form.label :name %>
+	</div>
+	<div class="span-4">
+		<%= form.text_field :name, :class => "span-4" %>
+	</div>
+
+	<div class="span-2">
+		<%= form.label :surname %>
+	</div>
+	<div class="span-4 last">
+		<%= form.text_field :surname, :class => "span-4" %>
+	</div>
+</div>
+
+<div class="span-2">
+	<%= form.label :email %>
+</div>
+<div class="span-8 last">
+	<%= form.text_field :email, :class => "span-5" %>
+</div>
+
+<div class="span-4">
+	<%= form.label :password, form.object.new_record? ? nil : "Change password" %>
+</div>
+<div class="span-8 last">
+	<%= form.password_field :password, :class => "span-4" %>
+</div>
+
+<div class="span-4">
+	<%= form.label :password_confirmation %>
+</div>
+<div class="span-8 last">
+	<%= form.password_field :password_confirmation, :class => "span-4" %>
+</div>
+
+<div class="span-2">
+	<%= form.label :is_admin %>
+</div>
+<div class="span-8 last">
+	<%= form.check_box :is_admin %>
+</div>
+

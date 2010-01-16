@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  offer: 
+  bill_number: MyString
+  transaction: 
+
+two:
+  offer: 
+  bill_number: MyString
+  transaction: 

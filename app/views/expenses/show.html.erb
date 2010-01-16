@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @expense.name %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%=h @expense.hours %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%=h @expense.rate %>
+</p>
+
+<p>
+  <b>Fixcosts:</b>
+  <%=h @expense.fixcosts %>
+</p>
+
+<p>
+  <b>Remark:</b>
+  <%=h @expense.remark %>
+</p>
+
+<p>
+  <b>Offer:</b>
+  <%=h @expense.offer %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @expense.user %>
+</p>
+
+
+<%= link_to 'Edit', edit_expense_path(@expense) %> |
+<%= link_to 'Back', expenses_path %>

@@ -1,0 +1,70 @@
+<% form_for(@offer) do |f| %>
+		<div class="span-24">
+			<%= f.error_messages %>
+		</div>
+		
+		<h3>Kontakt</h3>
+		<div class="span-24">
+			<div class="span-1">
+				<%= f.label :lead %>
+			</div>
+			<div class="span-4">
+				<%= f.select(:user_id, User.find(:all).collect {|u| ["#{u.name} #{u.surname}", u.id]}, {:prompt => t('select.lead')}) %>
+			</div>
+			<div class="span-19 last">
+				(gets <%= session[:settings].offer_provision %>% provision on successful contract)
+			</div>
+		</div>
+		<div class="span-1">
+			Dear
+		</div>
+		
+		<div class="span-23 last">
+			<%= f.select(:customer_id, Customer.find(:all).collect {|c| ["#{c.title} #{c.name} #{c.surname}, #{c.company.name}", c.id]}, {:prompt => t('select.customer')}, 
+			{ :onchange => 
+    remote_function(
+         {:action => :get_customer_address} )}) %>
+		</div>
+
+		<div id="customer_info" class="span-24" style="display: none;">
+		Hello
+		</div>
+		
+		<h3>Anschreiben</h3>
+		<div class="span-24 append-bottom">
+			<%= f.tinymce :content %>
+		</div>
+		
+		<h3>Positionen</h3>
+		<div class="span-24">
+			<div class="span-10">Beschreibung</div>
+			<div class="span-4">&nbsp;</div>
+			<div class="span-8">Anmerkungen</div>
+			<div class="span-2 last">&nbsp;</div>
+		</div>
+		<div class="expense_item span-24">
+			<% f.fields_for :expenses do |e| %>
+				<%= render :partial => 'expense', :locals => { :f => e } %>
+			<% end %>
+		</div>
+		
+		<div class="span-24 append-bottom">
+			<%= add_child_link "Aufwand hinzufügen", :expenses %>
+			<%= new_child_fields_template(f, :expenses)%>
+		</div>
+		
+		
+		<h3>Anmerkungen</h3>
+		<div class="span-24">
+			<%= f.tinymce :addition %>
+		</div>
+		<div class="span-2">
+			<%= f.label :taxrate %><br />
+		</div>
+		<div class="span-22 last">
+			<%= f.text_field :taxrate, :class => "span-1" %>
+		</div>
+		<div class="span-24">
+			<%= f.submit button_name %>
+		</div>
+<% end %>

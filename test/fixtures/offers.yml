@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: 
+  content: 
+  addition: 
+  taxrate: 
+  customer: 
+
+two:
+  number: 
+  content: 
+  addition: 
+  taxrate: 
+  customer: 

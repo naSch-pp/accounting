@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="content-language" content="DE"/>
+		<meta http-equiv="pragma" content="no-cache"/>
+		<meta http-equiv="cache-control" content="no-cache"/>
+		<meta name="author" content="Patrick Heneise, nachtschicht GbR"/>
+		<title><%= h(yield(:title) || "Untitled") %></title>
+		<%= stylesheet_link_tag "blueprint/screen", :cache => true %>
+		<%= stylesheet_link_tag "blueprint/plugins/fancy-type/screen", :media => "screen, projection", :cache => true %>
+		<%= stylesheet_link_tag "blueprint/plugins/tabs/screen", :media => "screen, projection", :cache => true %>
+		<!--[if IE]><%= stylesheet_link_tag "blueprint/ie", :media => "screen, projection" %><![endif]-->
+		<%= stylesheet_link_tag "style", :cache => true %>
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<%= init_tinymce_hammer_if_required %>
+		<%= javascript_include_tag 'jquery' %>
+		<%= javascript_include_tag 'jquery-ui' %>
+		<%= javascript_include_tag 'jrails' %>
+		<%= javascript_include_tag 'application' %>
+    <%= yield(:head) %>
+	</head>
+	<body>
+			<div id="flash">
+				<%= display_flashes %>
+			</div>
+			<div id="header" class="header">
+				<div id="logo"><h1><a href="/"><span>teambusiness</span></a></h1></div>
+			</div>
+			
+			<div id="navigation">
+				<div class="container">
+					<div class="span-4 prepend-top append-bottom">
+						<h4>Benutzer</h4>
+						<%= link_to 'Erstellen', new_user_path %><br />
+						<%= link_to 'Liste', users_path %><br />
+					</div>
+					<div class="span-4 prepend-top append-bottom">
+						<h4>Buchhaltung</h4>
+						<%= link_to 'Konto-Transaktion', transactions_path %><br />
+						<%= link_to 'Angebote', offers_path %><br />
+						<%= link_to 'Rechnungen', bills_path %>
+					</div>
+					<div class="span-4 prepend-top append-bottom">
+						<h4>Verwaltung</h4>
+						<%= link_to 'Neues Konto', new_account_path %> / <%= link_to 'Kontoliste', accounts_path %><br />
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">

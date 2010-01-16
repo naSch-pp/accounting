@@ -1,0 +1,24 @@
+<h1>Editing bill</h1>
+
+<% form_for(@bill) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :offer %><br />
+    <%= f.text_field :offer %>
+  </p>
+  <p>
+    <%= f.label :bill_number %><br />
+    <%= f.text_field :bill_number %>
+  </p>
+  <p>
+    <%= f.label :transaction %><br />
+    <%= f.text_field :transaction %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bill %> |
+<%= link_to 'Back', bills_path %>
